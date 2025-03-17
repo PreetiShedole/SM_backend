@@ -1,17 +1,24 @@
 {
-  "name": "Society_Management_System_backend",
+  "name": "society_management_system_backend",
   "version": "1.0.0",
+  "description": "start from 12-2-25",
+  "keywords": [],
+  "homepage": "https://github.com/PreetiShedole/SM_backend#readme",
+  "bugs": {
+    "url": "https://github.com/PreetiShedole/SM_backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PreetiShedole/SM_backend.git"
+  },
+  "license": "ISC",
+  "author": "PreetiShedole",
+  "type": "module",
   "main": "server.js",
-  "type": "module"
-  ,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "PreetiShedole",
-  "license": "ISC",
-  "description": "start from 12-2-25",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
