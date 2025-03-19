@@ -17,10 +17,7 @@ app.use("/api/users", userRoutes);
 
 // Connect to mongoDB
 mongoose
-  .connect(URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(URI)
   .then(() => {
     console.log("Connected to mongoDB");
   })
