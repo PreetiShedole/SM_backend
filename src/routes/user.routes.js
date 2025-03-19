@@ -14,14 +14,19 @@ import { protect } from "../middleware/authMiddleware.js";
 const router = express.Router();
 
 // Public Routes
-router.post("/register", registerUser);
+router.post("/registerUser", registerUser);
+
 router.post("/login", loginUser);
+
 router.post("/reset-password", resetPassword);
 
 // Protected Routes
 router.get("/", protect, getAllUsers);
+
 router.get("/:id", protect, getUserById);
-router.put("/profile", protect, updateUserProfile);
+
+router.put("/profileUpdate", protect, updateUserProfile);
+
 router.delete("/:id", protect, deleteUserById);
 
 export default router;
