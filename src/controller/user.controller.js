@@ -57,6 +57,8 @@ export const registerUser = async (req, res) => {
         name: user.name,
         email: user.email,
         role: user.role,
+        phone: user.phone,
+        societyName: user.societyName,
       },
       token,
     });
@@ -73,12 +75,12 @@ export const loginUser = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ message: "Invalid email or password" });
+      return res.status(404).json({ message: "Invalid email" });
     }
 
     const isPasswordMatch = await user.matchPassword(password);
     if (!isPasswordMatch) {
-      return res.status(400).json({ message: "Invalid email or password" });
+      return res.status(400).json({ message: "Invalid password" });
     }
 
     const token = generateToken(user);
@@ -90,6 +92,8 @@ export const loginUser = async (req, res) => {
         name: user.name,
         email: user.email,
         role: user.role,
+        phone: user.phone,
+        societyName: user.societyName,
       },
       token,
     });

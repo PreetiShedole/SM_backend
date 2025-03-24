@@ -14,7 +14,7 @@ import { protect } from "../middleware/authMiddleware.js";
 const router = express.Router();
 
 // Public Routes
-router.post("/registerUser", registerUser);
+router.post("/register-User", registerUser);
 
 router.post("/login", loginUser);
 
@@ -25,7 +25,7 @@ router.get("/", protect, getAllUsers);
 
 router.get("/:id", protect, getUserById);
 
-router.put("/profileUpdate", protect, updateUserProfile);
+router.put("/profile-Update", protect, updateUserProfile);
 
 router.delete("/:id", protect, deleteUserById);
 
